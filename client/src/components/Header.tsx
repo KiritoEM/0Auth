@@ -6,6 +6,9 @@ const Header = (): JSX.Element => {
           Bienvenue sur <span>0Auth!</span>
         </h1>
       </div>
+      <div className="text">
+        <p>Connectez vous avec votre compte Google ou compte Facebook</p>
+      </div>
     </section>
   );
 };
