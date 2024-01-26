@@ -3,7 +3,9 @@ import Header from "@/components/Header";
 const login = (): JSX.Element => {
   return (
     <section id="login">
-      <Header />
+      <div id="login__container">
+        <Header />
+      </div>
     </section>
   );
 };

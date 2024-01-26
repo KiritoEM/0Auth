@@ -1,5 +1,29 @@
-#login{
+#login {
     width: 100%;
     height: 100vh;
     background-color: $bg-color;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #header {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                h1 {
+                    color: #fff;
+                    font-size: 3em;
+
+                    span {
+                        color: #2845e7;
+                    }
+                }
+            }
+        }
+    }
 }
