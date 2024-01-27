@@ -24,6 +24,8 @@
     "next": "^14.1.0",
     "nodemon": "^3.0.3",
     "passport": "^0.7.0",
+    "passport-auth0": "^1.4.4",
+    "passport-facebook": "^3.0.0",
     "passport-google-oauth20": "^2.0.0",
     "passport-oauth": "^1.0.0",
     "typescript": "^5.3.3"
@@ -36,6 +38,7 @@
     "@types/express-session": "^1.17.10",
     "@types/morgan": "^1.9.9",
     "@types/passport": "^1.0.16",
+    "@types/passport-facebook": "^3.0.3",
     "ts-node": "^10.9.2"
   }
 }
