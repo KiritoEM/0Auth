@@ -7,6 +7,33 @@ $primary : #2845e7;
     font-family: 'Mukta', sans-serif;
 }
 
+@keyframes oscillateImage {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        transform-origin: top center;
+    }
+
+    25% {
+        transform: translate(0, 0) rotate(3deg);
+        transform-origin: top center;
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+        transform-origin: top center;
+    }
+
+    75% {
+        transform: translate(0, 0) rotate(3deg);
+        transform-origin: top center;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        transform-origin: top center;
+    }
+}
+
 //pour le responsive design
 @mixin screen($breakpoint) {
     @if $breakpoint ==small {

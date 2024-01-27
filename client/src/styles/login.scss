@@ -6,19 +6,22 @@
 
     .shape-1 {
         position: absolute;
-        top: 0;
+        top: -20px;
         left: 0;
 
         img {
             width: 182px;
             object-fit: contain;
+            animation: oscillateImage 4s linear infinite;
+            transform: translate(0, 0) rotate(0deg);
+            transform-origin: top center;
 
             @include screen(small) {
                 width: 98px;
             }
 
             @include screen(medium) {
-                width: 145px;
+                width: 165px;
             }
         }
     }
@@ -33,7 +36,7 @@
             object-fit: contain;
 
             @include screen(small) {
-                width: 162px;
+                width: 146px;
             }
 
             @include screen(medium) {
