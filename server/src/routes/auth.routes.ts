@@ -12,7 +12,7 @@ router.get("/login/failed", (req: Request, res: Response) => {
   });
 });
 
-router.get("/login/success", (req: Request, res: Response) => {
+router.get("/login/success", isAuthenticated, (req: Request, res: Response) => {
   if (req.user) {
     res
       .status(200)
