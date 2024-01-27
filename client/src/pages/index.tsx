@@ -10,15 +10,15 @@ const login = (): JSX.Element => {
         <title>0Auth</title>
       </Head>
       <section id="login">
+        <div className="shape-1">
+          <img src="/shape-1.png" alt="" />
+        </div>
         <div id="login__container">
-          <div className="shape-1">
-            <img src="/shape-1.png" alt="" />
-          </div>
           <Header />
           <ButtonsLogin />
-          <div className="shape-2">
-            <img src="/shape-2.png" alt="" />
-          </div>
+        </div>
+        <div className="shape-2">
+          <img src="/shape-2.png" alt="" />
         </div>
       </section>
     </Fragment>
