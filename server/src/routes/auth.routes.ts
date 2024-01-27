@@ -40,6 +40,21 @@ router.get(
   })
 );
 
+router.get(
+  "/facebook",
+  passport.authenticate("google", {
+    scope: ["email"],
+  })
+);
+
+router.get(
+  "/facebook/callback",
+  passport.authenticate("facebook", {
+    successRedirect: "http://localhost:3000/sucessful",
+    failureRedirect: "/login/failed",
+  })
+);
+
 router.get("/logout", (req: Request, res: Response) => {
   (req as any).logout();
   res.redirect("/");
