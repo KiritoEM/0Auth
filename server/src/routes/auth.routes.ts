@@ -23,15 +23,15 @@ router.get("/login/success", (req: Request, res: Response) => {
 });
 
 router.get(
-  "/callback",
+  "/google/callback",
   passport.authenticate("google", {
     successRedirect: process.env.REDIRECT_URL,
-    failureRedirect: "/google/login/failed",
+    failureRedirect: "/login/failed",
   })
 );
 
 router.get(
-  "/",
+  "/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
 

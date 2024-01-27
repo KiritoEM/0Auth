@@ -5,7 +5,7 @@ import compression from "compression";
 import morgan from "morgan";
 import cookieSession from "cookie-session";
 import passeport from "../config/passeport";
-import authRoutes from "./../routes/auth.routes";
+import googleRoutes from "../routes/auth.routes";
 
 dotenv.config();
 const app: Application = express();
@@ -31,6 +31,6 @@ app.get("/home", (req: Request, res: Response) => {
 });
 
 // App routes
-app.use("/google", authRoutes);
+app.use("/api/auth", googleRoutes);
 
 export default app;
