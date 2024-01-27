@@ -2,7 +2,7 @@ const index = (): JSX.Element => {
   return (
     <section id="accueil">
       <h1>
-        Authentification avec 0Auth avec <span>succés ! </span>
+        Authentification 0Auth <span>réussie ! </span>
       </h1>
     </section>
   );
