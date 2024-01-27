@@ -12,11 +12,11 @@
         h1 {
             color: #fff;
             font-weight: 700;
-            font-size: 2em;
+            font-size: 1.9em;
             text-align: center;
 
             @include screen(small) {
-                font-size: 33.3px;
+                font-size: 29px;
             }
 
             span {
@@ -34,7 +34,7 @@
         }
 
         .btn {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
             padding-top: 10px;
             padding-bottom: 10px;

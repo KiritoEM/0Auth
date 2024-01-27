@@ -16,7 +16,12 @@ const ButtonsLogin = (): JSX.Element => {
         </button>
       </div>
       <div className="facebook-btn">
-        <button className="btn btn-2">
+        <button
+          className="btn btn-2"
+          onClick={() =>
+            router.push("http://localhost:8000/api/auth/facebook/callback")
+          }
+        >
           <img src="/facebook-icon.png" alt="" /> Se connecter avec Facebook
         </button>
       </div>

@@ -20,7 +20,7 @@ passport.use(
         "https://www.googleapis.com/auth/userinfo.email",
       ],
     },
-    (_accessToken, _refreshToken, profile, done) => {
+    (accessToken, refreshToken, profile, done) => {
       console.log("profile de l' utilisateur", profile);
       return done(null, profile);
     }
@@ -36,9 +36,13 @@ passport.use(
       callbackURL: `http://localhost:${process.env.PORT}/api/auth/facebook/callback`,
       profileFields: ["id", "displayName", "email"],
     },
-    (_accessToken, _refreshToken, profile: FacebookProfile, done) => {
+    (accessToken, refreshToken, profile: FacebookProfile, done) => {
       try {
         console.log("Profile de l'utilisateur Facebook", profile);
+        console.log("AccessToken:", accessToken);
+        console.log("RefreshToken:", refreshToken);
+        console.log("Profile:", profile);
+
         return done(null, profile);
       } catch (error) {
         console.error(
