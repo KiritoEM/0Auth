@@ -1,10 +1,17 @@
-import { signIn } from "next-auth/react";
+import { useRouter } from "next/router";
 
 const ButtonsLogin = (): JSX.Element => {
+  const router = useRouter();
+
   return (
     <section id="buttons-login">
       <div className="google-btn">
-        <button className="btn btn-1" onClick={() => signIn("google")}>
+        <button
+          className="btn btn-1"
+          onClick={() =>
+            router.push("http://localhost:8000/api/auth/google/callback")
+          }
+        >
           <img src="/google-icon.png" alt="" /> Se connecter avec Google
         </button>
       </div>
