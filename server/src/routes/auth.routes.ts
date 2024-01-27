@@ -23,21 +23,21 @@ router.get("/login/success", (req: Request, res: Response) => {
 });
 
 router.get(
-  "/google",
+  "/callback",
   passport.authenticate("google", {
     successRedirect: process.env.REDIRECT_URL,
-    failureRedirect: "/login/failed",
+    failureRedirect: "/google/login/failed",
   })
 );
 
 router.get(
-  "/google",
+  "/",
   passport.authenticate("google", { scope: ["profile", "email"] })
 );
 
 router.get("/logout", (req: Request, res: Response) => {
-  req.logout();
-  res.redirect(process.env.REDIRECT_URL);
+  (req as any).logout();
+  res.redirect("/");
 });
 
 export default router;

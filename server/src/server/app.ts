@@ -31,6 +31,6 @@ app.get("/home", (req: Request, res: Response) => {
 });
 
 // App routes
-app.use("/pokemon", authRoutes);
+app.use("/google", authRoutes);
 
 export default app;
