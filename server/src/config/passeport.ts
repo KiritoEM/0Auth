@@ -14,4 +14,4 @@ passport.use(
   )
 );
 
-export default passport.initialize();
+export default passport;

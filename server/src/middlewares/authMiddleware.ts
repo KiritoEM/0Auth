@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { NextApiHandler, NextApiRequest } from "next";
 
 const isAuthenticated = (req: Request, res: Response, next: () => any) => {
   if (req.isAuthenticated()) {
@@ -8,4 +7,4 @@ const isAuthenticated = (req: Request, res: Response, next: () => any) => {
   res.redirect("/");
 };
 
-module.exports = isAuthenticated;
+export default isAuthenticated;
