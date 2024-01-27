@@ -25,14 +25,19 @@ router.get("/login/success", (req: Request, res: Response) => {
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: process.env.REDIRECT_URL,
+    successRedirect: "http://localhost:3000/",
     failureRedirect: "/login/failed",
   })
 );
 
 router.get(
   "/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
+  passport.authenticate("google", {
+    scope: [
+      "https://www.googleapis.com/auth/userinfo.profile",
+      "https://www.googleapis.com/auth/userinfo.email",
+    ],
+  })
 );
 
 router.get("/logout", (req: Request, res: Response) => {

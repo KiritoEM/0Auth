@@ -3,19 +3,20 @@ import dotenv from "dotenv";
 import cors from "cors";
 import compression from "compression";
 import morgan from "morgan";
-import cookieSession from "cookie-session";
+import session from "express-session";
 import passeport from "../config/passeport";
 import googleRoutes from "../routes/auth.routes";
 
 dotenv.config();
 const app: Application = express();
 
-//middalware
+//middlewares
 app.use(
-  cookieSession({
-    name: "session",
-    keys: ["cyberwolve"],
-    maxAge: 24 * 60 * 60 * 100,
+  session({
+    secret: "0auth-key",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
   })
 );
 app.use(express.json());
@@ -28,6 +29,10 @@ app.use(passeport.session());
 
 app.get("/home", (req: Request, res: Response) => {
   res.send("Serveur working well!");
+});
+
+app.get("/api/auth/error", (req, res) => {
+  res.status(500).json({ error: "Authentication failed" });
 });
 
 // App routes
